@@ -118,7 +118,7 @@ header {
 
 #overlay-logo {
     font-family: 'Cosmopolitan Script', cursive;
-    font-size: 10.5rem;
+    font-size: 10.5vw;
 
     color: #fff;
     transform: scale(1);
