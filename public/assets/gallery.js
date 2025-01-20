@@ -1,20 +1,16 @@
-let currentIndex = 0;
+let slideIndex = 0;
 
-function moveCarousel(direction) {
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
-    
-    // Update currentIndex based on direction
-    currentIndex += direction;
-    
-    // Loop the carousel if it goes beyond bounds
-    if (currentIndex < 0) {
-        currentIndex = totalItems - 1;
-    } else if (currentIndex >= totalItems) {
-        currentIndex = 0;
-    }
+function moveSlide(step) {
+  slideIndex += step;
+  if (slideIndex < 0) {
+    slideIndex = document.querySelectorAll('.slide').length - 1;
+  } else if (slideIndex >= document.querySelectorAll('.slide').length) {
+    slideIndex = 0;
+  }
+  updateSlidePosition();
+}
 
-    // Adjust the carousel's position based on currentIndex
-    const offset = -100 * currentIndex;
-    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+function updateSlidePosition() {
+  const slides = document.querySelector('.slides');
+  slides.style.transform = `translateX(-${slideIndex * 100}%)`;
 }
