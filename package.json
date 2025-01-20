@@ -14,11 +14,11 @@
   "devDependencies": {
     "nodemon": "^2.0.22"
   },
+  
+  "engines": {
+  "node": "16.x"
+},
   "author": "Your Name",
   "license": "MIT",
   "type": "module" 
-},
-"engines": {
-  "node": "16.x"
 }
-
