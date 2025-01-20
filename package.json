@@ -15,5 +15,6 @@
     "nodemon": "^2.0.22"
   },
   "author": "Your Name",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"  // Add this line to use ES Modules syntax
 }
