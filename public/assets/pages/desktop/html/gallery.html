@@ -1,39 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carousel Gallery</title>
-    <link rel="stylesheet" href="/assets/pages/desktop/styles/gallery.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon Gallery</title>
+  <link rel="stylesheet" href="assets/pages/desktop/styles/gallery.css">
 </head>
-
-<div class="carousel-container">
-    <div class="carousel">
-        <!-- Wigs Section -->
-        <div class="carousel-item wigs">
-            <h2>Wigs</h2>
-            <img src="path/to/wigs-image1.jpg" alt="Wigs Image 1">
-            <img src="path/to/wigs-image2.jpg" alt="Wigs Image 2">
-            <!-- Add more wig images as needed -->
-        </div>
-        
-        <!-- Braids Section -->
-        <div class="carousel-item braids">
-            <h2>Braids</h2>
-            <img src="path/to/braids-image1.jpg" alt="Braids Image 1">
-            <img src="path/to/braids-image2.jpg" alt="Braids Image 2">
-            <!-- Add more braid images as needed -->
-        </div>
-        
-        <!-- Cut & Color Section -->
-        <div class="carousel-item cut-color">
-            <h2>Cut & Color</h2>
-            <img src="path/to/cut-color-image1.jpg" alt="Cut & Color Image 1">
-            <img src="path/to/cut-color-image2.jpg" alt="Cut & Color Image 2">
-            <!-- Add more cut & color images as needed -->
-        </div>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <h1>SLB Salon</h1>
     </div>
-    
-    <!-- Carousel Navigation Buttons -->
-    <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
-    <button class="next" onclick="moveCarousel(1)">&#10095;</button>
-</div>
-    <script src="/assets/gallery.js"></script>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#wigs">Wigs</a></li>
+        <li><a href="#braids">Braids</a></li>
+        <li><a href="#cutcolor">Cut & Color</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Carousel Section -->
+  <section id="carousel-section">
+    <div class="carousel">
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+      <div class="slides">
+        <!-- Wigs Section -->
+        <div class="slide">
+          <h2>Wigs</h2>
+          <div class="image-gallery">
+            <img src="wig1.jpg" alt="Wig 1">
+            <img src="wig2.jpg" alt="Wig 2">
+            <img src="wig3.jpg" alt="Wig 3">
+          </div>
+        </div>
+
+        <!-- Braids Section -->
+        <div class="slide">
+          <h2>Braids</h2>
+          <div class="image-gallery">
+            <img src="braid1.jpg" alt="Braid 1">
+            <img src="braid2.jpg" alt="Braid 2">
+            <img src="braid3.jpg" alt="Braid 3">
+          </div>
+        </div>
+
+        <!-- Cut & Color Section -->
+        <div class="slide">
+          <h2>Cut & Color</h2>
+          <div class="image-gallery">
+            <img src="cutcolor1.jpg" alt="Cut & Color 1">
+            <img src="cutcolor2.jpg" alt="Cut & Color 2">
+            <img src="cutcolor3.jpg" alt="Cut & Color 3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 SLB Salon. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/gallery.js"></script>
+</body>
+</html>
