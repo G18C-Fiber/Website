@@ -1,14 +1,16 @@
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const wigCarousel = new bootstrap.Carousel('#wig-carousel', {
+        interval: 3000,
+        ride: 'carousel'
+    });
 
-const carousels = document.querySelectorAll('.carousel');
+    const braidCarousel = new bootstrap.Carousel('#braid-carousel', {
+        interval: 3000,
+        ride: 'carousel'
+    });
 
-carousels.forEach(carousel => {
-    let slides = carousel.querySelectorAll('.carousel-slide');
-    setInterval(() => {
-        currentIndex++;
-        if (currentIndex >= slides.length) {
-            currentIndex = 0;
-        }
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }, 3000);
+    const colorCarousel = new bootstrap.Carousel('#color-carousel', {
+        interval: 3000,
+        ride: 'carousel'
+    });
 });
