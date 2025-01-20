@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import serverlessExpress from "@vendia/serverless-express"; // Default export
+import serverlessExpress from "@vendia/serverless-express"; // Correct import for Vercel
 
 // Get __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
