@@ -1,7 +1,8 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { createServerlessExpress } from "@vendia/serverless-express"; // Required for Vercel
+import pkg from "@vendia/serverless-express"; // Use default import for CommonJS
+const { createServerlessExpress } = pkg;
 
 // Get __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
