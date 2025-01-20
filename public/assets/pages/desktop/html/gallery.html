@@ -1,72 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salon Gallery!</title>
-  <link rel="stylesheet" href="assets/pages/desktop/styles/gallery.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Styles Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ5v5wPjDUUSV0GfIzqEd4iD6K1wh9Os5J5PnXjIkoi6h6UpDhd9Gq8G5Ktq" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/pages/desktop/styles/gallery.css"> <!-- Link to custom CSS -->
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <h1>SLB Salon</h1>
+    <div class="container my-5">
+        <!-- Wigs Carousel -->
+        <h2 class="text-center mb-4">Wigs</h2>
+        <div id="wig-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/800x400.png?text=Wig+1" class="d-block w-100" alt="Wig 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400.png?text=Wig+2" class="d-block w-100" alt="Wig 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400.png?text=Wig+3" class="d-block w-100" alt="Wig 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#wig-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#wig-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Braids Carousel -->
+        <h2 class="text-center mb-4">Braids</h2>
+        <div id="braid-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/800x400.png?text=Braid+1" class="d-block w-100" alt="Braid 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400.png?text=Braid+2" class="d-block w-100" alt="Braid 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400.png?text=Braid+3" class="d-block w-100" alt="Braid 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#braid-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#braid-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Color Carousel -->
+        <h2 class="text-center mb-4">Color</h2>
+        <div id="color-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/800x400.png?text=Color+1" class="d-block w-100" alt="Color 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400.png?text=Color+2" class="d-block w-100" alt="Color 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400.png?text=Color+3" class="d-block w-100" alt="Color 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#color-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#color-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#wigs">Wigs</a></li>
-        <li><a href="#braids">Braids</a></li>
-        <li><a href="#cutcolor">Cut & Color</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Carousel Section -->
-  <section id="carousel-section">
-    <div class="carousel">
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
-
-      <div class="slides">
-        <!-- Wigs Section -->
-        <div class="slide">
-          <h2>Wigs</h2>
-          <div class="image-gallery">
-            <img src="wig1.jpg" alt="Wig 1">
-            <img src="wig2.jpg" alt="Wig 2">
-            <img src="wig3.jpg" alt="Wig 3">
-          </div>
-        </div>
-
-        <!-- Braids Section -->
-        <div class="slide">
-          <h2>Braids</h2>
-          <div class="image-gallery">
-            <img src="braid1.jpg" alt="Braid 1">
-            <img src="braid2.jpg" alt="Braid 2">
-            <img src="braid3.jpg" alt="Braid 3">
-          </div>
-        </div>
-
-        <!-- Cut & Color Section -->
-        <div class="slide">
-          <h2>Cut & Color</h2>
-          <div class="image-gallery">
-            <img src="cutcolor1.jpg" alt="Cut & Color 1">
-            <img src="cutcolor2.jpg" alt="Cut & Color 2">
-            <img src="cutcolor3.jpg" alt="Cut & Color 3">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2025 SLB Salon. All rights reserved.</p>
-  </footer>
-
-  <script src="assets/gallery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybK2P1vYOuHqln7v1Y0e4CZ6wrv7r5BdL57Pz5LwlR5XQgmR8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0Gqz7XZpBfRzLMOGp8C6zxHX/8O5w5DHzrDh0I6Sx3eW+cuP" crossorigin="anonymous"></script>
+    <script src="assets/gallery..js"></script> <!-- Link to custom JS -->
 </body>
 </html>
