@@ -1,24 +1,18 @@
-import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
-import serverless from "serverless-http";  // Use this for serverless integration
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createServerlessExpress } from '@vendia/serverless-express'; // Make sure it's installed
 
+// Get __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 
-// Serve static files from the public folder
-app.use(express.static(path.join(__dirname, "../public")));
-
-// Define routes
+// Example route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/index.html"));
+  res.send("Hello, World!");
 });
 
-app.get("/home", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/home.html"));
-});
-
-// Create serverless handler
-export const handler = serverless(app);
+// Export the serverless handler function (this is what Vercel expects)
+export default createServerlessExpress({ app });
