@@ -45,9 +45,8 @@ app.get("/contact", (req, res) => {
   }
 });
 
-app.get("/", (res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
-  }
+app.get("/", (req, res) => {
+  res.redirect("/home");
 });
 
 // Export the app directly for Vercel
