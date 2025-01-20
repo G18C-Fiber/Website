@@ -1,16 +1,14 @@
-let slideIndex = 0;
+let currentIndex = 0;
 
-function moveSlide(step) {
-  slideIndex += step;
-  if (slideIndex < 0) {
-    slideIndex = document.querySelectorAll('.slide').length - 1;
-  } else if (slideIndex >= document.querySelectorAll('.slide').length) {
-    slideIndex = 0;
-  }
-  updateSlidePosition();
-}
+const carousels = document.querySelectorAll('.carousel');
 
-function updateSlidePosition() {
-  const slides = document.querySelector('.slides');
-  slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-}
+carousels.forEach(carousel => {
+    let slides = carousel.querySelectorAll('.carousel-slide');
+    setInterval(() => {
+        currentIndex++;
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+        }
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 3000);
+});
