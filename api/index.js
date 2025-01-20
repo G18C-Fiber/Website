@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import serverlessExpress from "@vendia/serverless-express"; // Correct import for Vercel
+import serverlessExpress from "@vendia/serverless-express"; // Correct import
 
 // Get __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -35,22 +35,7 @@ app.get("/home", (req, res) => {
   }
 });
 
-app.get("/services", (req, res) => {
-  if (isMobile(req)) {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/services.html"));
-  } else {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/services.html"));
-  }
-});
-
-app.get("/contact", (req, res) => {
-  if (isMobile(req)) {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/contact.html"));
-  } else {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/contact.html"));
-  }
-});
-
+// Default route (for the main page)
 app.get("/", (req, res) => {
   if (isMobile(req)) {
     res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/index.html"));
@@ -59,5 +44,5 @@ app.get("/", (req, res) => {
   }
 });
 
-// Export the handler function for Vercel
+// Export the handler for Vercel serverless functions
 export default serverlessExpress({ app });
