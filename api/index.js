@@ -1,9 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import serverlessExpress from "@vendia/serverless-express";  // Default import
-
-const { createServerlessExpress } = serverlessExpress;  // Use default export
+import serverlessExpress from "@vendia/serverless-express"; // Import default export
 
 // Get __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -87,4 +85,4 @@ app.get("/", (req, res) => {
 });
 
 // Export the app as a serverless function
-export const handler = createServerlessExpress({ app });
+export const handler = serverlessExpress({ app });
