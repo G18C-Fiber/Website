@@ -78,12 +78,13 @@ header {
 
 #logo {
     font-family: 'Cosmopolitan Script', cursive;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Minimum, preferred, maximum font size */
     color: #fff;
-    transform: scale(0); /* Initially hidden */
+    transform: scale(0); /* Initially visible */
     transition: transform 0.3s ease;
     margin-bottom: 10px;
 }
+
 
 .hidden {
     transform: scale(0);
