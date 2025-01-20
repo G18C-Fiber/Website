@@ -1,8 +1,9 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import pkg from "@vendia/serverless-express"; // Use default import for CommonJS
-const { createServerlessExpress } = pkg;
+import serverlessExpress from "@vendia/serverless-express";  // Default import
+
+const { createServerlessExpress } = serverlessExpress;  // Use default export
 
 // Get __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -21,42 +22,67 @@ function isMobile(req) {
 
 // Routes
 app.get("/shop", (req, res) => {
-  if (isMobile(req)) {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/shop.html"));
-  } else {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/shop.html"));
+  try {
+    if (isMobile(req)) {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/shop.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/shop.html"));
+    }
+  } catch (error) {
+    console.error("Error in /shop route:", error);
+    res.status(500).send("Internal Server Error");
   }
 });
 
 app.get("/home", (req, res) => {
-  if (isMobile(req)) {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/home.html"));
-  } else {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/home.html"));
+  try {
+    if (isMobile(req)) {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/home.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/home.html"));
+    }
+  } catch (error) {
+    console.error("Error in /home route:", error);
+    res.status(500).send("Internal Server Error");
   }
 });
 
 app.get("/services", (req, res) => {
-  if (isMobile(req)) {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/services.html"));
-  } else {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/services.html"));
+  try {
+    if (isMobile(req)) {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/services.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/services.html"));
+    }
+  } catch (error) {
+    console.error("Error in /services route:", error);
+    res.status(500).send("Internal Server Error");
   }
 });
 
 app.get("/contact", (req, res) => {
-  if (isMobile(req)) {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/contact.html"));
-  } else {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/contact.html"));
+  try {
+    if (isMobile(req)) {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/contact.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/contact.html"));
+    }
+  } catch (error) {
+    console.error("Error in /contact route:", error);
+    res.status(500).send("Internal Server Error");
   }
 });
 
 app.get("/", (req, res) => {
-  if (isMobile(req)) {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/index.html"));
-  } else {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/index.html"));
+  try {
+    if (isMobile(req)) {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/index.html"));
+    } else {
+      res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/index.html"));
+    }
+  } catch (error) {
+    console.error("Error in / route:", error);
+    res.status(500).send("Internal Server Error");
   }
 });
 
