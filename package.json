@@ -16,5 +16,5 @@
   },
   "author": "Your Name",
   "license": "MIT",
-  "type": "module"  // Correctly placed here
+  "type": "module" 
 }
