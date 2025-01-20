@@ -1,9 +1,7 @@
 const express = require('express');
 const path = require('path');
-const { createServerlessExpress } = require('@vendia/serverless-express'); // CommonJS import
-
-// No need to declare __filename and __dirname in CommonJS
-// These are automatically available in Node.js
+const serverlessExpress = require('@vendia/serverless-express');
+const createServerlessExpress = serverlessExpress.default || serverlessExpress;  // Fix for CommonJS
 
 const app = express();
 
