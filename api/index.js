@@ -45,11 +45,8 @@ app.get("/contact", (req, res) => {
   }
 });
 
-app.get("/", (req, res) => {
-  if (isMobile(req)) {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/index.html"));
-  } else {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/index.html"));
+app.get("/", (res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
   }
 });
 
