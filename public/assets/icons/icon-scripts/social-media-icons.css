@@ -1,0 +1,49 @@
+/* social-media-icons.css */
+.social-media-icons {
+    display: flex; /* Use flexbox to arrange the icons side by side */
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 20px; /* Adds space between the icons */
+    align-items: center; /* Vertically center the icons */
+}
+/* instagram-icon.css */
+.social-icon svg {
+    width: 40px; /* Default size */
+    height: auto;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: white; /* Default color */
+}
+.socials-divider {
+    height: 40px;
+    width: 2px;
+    background-color: white;
+    margin: 20px auto;
+}
+
+/* Hover effect for the Instagram icon */
+.social-icon svg:hover {
+    color: #333; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    border-color: #333; 
+}
+
+
+
+.logo-500 svg {
+    width: 100%;
+    height: 100%;
+    transition: pop 0.3s ease;
+}
+.logo-500 {
+    color: #fff; /* Initial color */
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
+}
+
+.logo-500:hover {
+    transform: scale(0.8); /* Shrinks on hover */
+    opacity: 0.5; /* Fades out on hover */
+}
+

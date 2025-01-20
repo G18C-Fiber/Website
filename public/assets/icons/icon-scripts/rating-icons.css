@@ -1,0 +1,21 @@
+/* Star container styling */
+.stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem; /* Adjust spacing between stars */
+    margin-top: 0.5rem; /* Space above stars */
+}
+
+/* Individual star SVG styling */
+.star-icon {
+    width: 24px;
+    height: 24px;
+    fill: #000; /* Gold color */
+    transition: transform 0.2s ease-in-out;
+}
+
+.star-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    cursor: pointer;
+}
