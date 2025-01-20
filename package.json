@@ -16,5 +16,5 @@
   },
   "author": "Your Name",
   "license": "MIT",
-  "type": "module"  // Add this line to use ES Modules syntax
+  "type": "module"  // Correctly placed here
 }
