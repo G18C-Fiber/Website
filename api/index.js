@@ -1,12 +1,9 @@
 const express = require('express');
 const path = require('path');
-const { fileURLToPath } = require('url');
-const pkg = require('@vendia/serverless-express'); // CommonJS import
-const { createServerlessExpress } = pkg; // Destructure the createServerlessExpress function
+const { createServerlessExpress } = require('@vendia/serverless-express'); // CommonJS import
 
-// Get __dirname in CommonJS
-const __filename = fileURLToPath(__filename);
-const __dirname = path.dirname(__filename);
+// No need to declare __filename and __dirname in CommonJS
+// These are automatically available in Node.js
 
 const app = express();
 
