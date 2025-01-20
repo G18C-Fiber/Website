@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Cosmopolitan Script';
+    src: url('../../../fonts/CosmopolitanScript.otf') format('opentype');
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Increased height for scrolling */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    overflow-y: scroll; /* Enable vertical scrolling without visible scrollbar */
+    background-color: gray;
+}
+
+body::-webkit-scrollbar {
+
+background-color: red;
+display: none;
+}
+header {
+    position: sticky;
+    top: 0;
+    background: gray;
+    z-index: 10;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;  /* Centering the content */
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;  /* Allow positioning of elements within */
+}
+
+.header-content .logo-500 {
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content .logo-500 svg {
+    width: 100%;
+    height: auto;
+    fill: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header-content .logo-500:hover svg {
+    transform: scale(1.1);
+    fill: #ccc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+
+.logo-500 svg {
+    width: 100%; /* Ensure the SVG scales with the container */
+    height: auto;
+    fill: white; /* Matches the header text color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo-500:hover svg {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    fill: #ccc; /* Change color on hover */
+}
+
+
+#logo {
+    font-family: 'Cosmopolitan Script', cursive;
+    font-size: 2.5rem;
+
+    color: #fff;
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin: 0; /* Remove unnecessary margins */
+}
+
+.header-content a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.header-content a:first-child {
+    text-decoration: underline;
+}
+
+.header-content a:hover {
+    color: #333; /* Dark grey color on hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slight drop shadow */
+}
+
+
+.underline {
+    text-decoration: underline !important;
+    text-underline-offset: 6px; /* Adjust the value to move the underline further down */
+    color: black;
+
+}
+/* Ensure existing header and body styles are inherited properly */
+
+/* Styling for Contact Section */
+.contact-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.mission {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    height:  20rem;
+     
+}
+
+.mission-content {
+       display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the content */
+    width: 100%;
+      
+}
+
+.mission-text {
+    width: 40%; /* Adjust the text width */
+    padding-right: 20px;
+      
+}
+
+.mission-image img {
+    max-width: 60%; /* Adjust the image size */
+    height: auto;
+    border-radius: 300px; /* Optional: Adds rounded corners */
+}
+.mission h2 {
+  
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: white
+}
+
+.mission p {
+  
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+      font-family: 'Comfortaa', sans-serif;
+      color: white 
+      
+}
+
+.mission {
+    padding: 40px 20px;
+    text-align: center;
+    
+    font-family: 'Comfortaa', sans-serif;
+    background-color: gray
+}
+.contact-section h1 {
+     font-family: 'Comfortaa', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: white
+}
+
+.contact-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color:white
+}
+
+
+
+.contact-info {
+    padding: 40px 20px;
+    text-align: center;
+
+    transition: transform 1s ease, color 1s ease;
+    background-color: gray;
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+     font-family: 'Comfortaa', sans-serif;
+     color: white;
+    text-transform: uppercase;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color:white
+}
+
+
+/* Styling for links */
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Add transition specifically for color */
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Add transition specifically for color */
+}
+/* Hover effect */
+.contact-info a:hover {
+    text-decoration: none;
+    color: #333;
+ /* Set the desired color change on hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+
+footer a:hover {
+    text-decoration: none;
+    color: #333;
+ /* Set the desired color change on hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color:white
+}
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: gray;
+}
+
+.social-icon svg {
+    width: 40px; /* Default size */
+    height: auto;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: white; /* Default color */
+}
+
+/* Hover effect for the Instagram icon */
+.social-icon svg:hover {
+    color: #333; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    border-color: #333; 
+}
+.social-media-icons {
+    display: flex; /* Use flexbox to arrange the icons side by side */
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 20px; /* Adds space between the icons */
+    align-items: center;
+}
+.socials-divider {
+    height: 40px;
+    width: 2px;
+    background-color: white;
+ 
+}
+.divider {
+    width: 75%;
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: white;
+    margin: 20px auto; /* Centers the divider horizontally with some spacing */
+}
+.divider2 {
+    width: 55%;
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: white;
+    margin: 20px auto;
+}
