@@ -21,6 +21,14 @@ app.get("/shop", (req, res) => {
   }
 });
 
+app.get("/shop", (req, res) => {
+  if (isMobile(req)) {
+    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/gallery.html"));
+  } else {
+    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/gallery.html"));
+  }
+});
+
 app.get("/home", (req, res) => {
   if (isMobile(req)) {
     res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/home.html"));
