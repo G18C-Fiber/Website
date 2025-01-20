@@ -1,7 +1,5 @@
-const express = require('express');
-const path = require('path');
-const serverlessExpress = require('@vendia/serverless-express');
-const createServerlessExpress = serverlessExpress.default || serverlessExpress;  // Fix for CommonJS
+const express = require("express");
+const path = require("path");
 
 const app = express();
 
@@ -55,5 +53,5 @@ app.get("/", (req, res) => {
   }
 });
 
-// Export the app as a serverless function
-module.exports.handler = createServerlessExpress({ app });
+// Export the app directly for Vercel
+module.exports = app;
