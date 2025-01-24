@@ -21,20 +21,13 @@ app.get("/shop", (req, res) => {
   }
 });
 
-const axios = require("axios");
-
-const { createProxyMiddleware } = require("http-proxy-middleware");
-
-app.use(
-  "/gallery",
-  createProxyMiddleware({
-    target: "https://b097a24c-9c3e-4c73-9281-069e8ae4c692-00-2w5ale0arjeoh.picard.replit.dev",
-    changeOrigin: true, // Updates the host header to match the target
-    pathRewrite: { "^/gallery": "" }, // Optional: Rewrite the path if needed
-  })
-);
-
-
+app.get("/gallery", (req, res) => {
+  if (isMobile(req)) {
+    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/gallery.html"));
+  } else {
+    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/gallery.html"));
+  }
+});
 
 app.get("/home", (req, res) => {
   if (isMobile(req)) {
