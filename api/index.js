@@ -23,20 +23,17 @@ app.get("/shop", (req, res) => {
 
 const axios = require("axios");
 
-app.get("/gallery", async (req, res) => {
-  try {
-    const response = await axios.get(
-      "https://b097a24c-9c3e-4c73-9281-069e8ae4c692-00-2w5ale0arjeoh.picard.replit.dev",
-      { responseType: "stream" } // Ensures the response is streamed
-    );
+const { createProxyMiddleware } = require("http-proxy-middleware");
 
-    res.set(response.headers); // Copy headers from the original response
-    response.data.pipe(res); // Pipe the response directly to the client
-  } catch (error) {
-    console.error("Error fetching content:", error.message);
-    res.status(500).send("Failed to load gallery.");
-  }
-});
+app.use(
+  "/gallery",
+  createProxyMiddleware({
+    target: "https://b097a24c-9c3e-4c73-9281-069e8ae4c692-00-2w5ale0arjeoh.picard.replit.dev",
+    changeOrigin: true, // Updates the host header to match the target
+    pathRewrite: { "^/gallery": "" }, // Optional: Rewrite the path if needed
+  })
+);
+
 
 
 app.get("/home", (req, res) => {
