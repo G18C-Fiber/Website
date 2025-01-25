@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require("path");
+const axios = require("axios");
+
 
 const app = express();
 
@@ -21,13 +23,19 @@ app.get("/shop", (req, res) => {
   }
 });
 
-app.get("/gallery", (req, res) => {
-  if (isMobile(req)) {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/gallery.html"));
-  } else {
-    res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/gallery.html"));
+app.get("/gallery", async (req, res) => {
+  const desktopURL = "https://b097a24c-9c3e-4c73-9281-069e8ae4c692-00-2w5ale0arjeoh.picard.replit.dev";
+
+  try {
+    const response = await axios.get(desktopURL);
+    res.set("Content-Type", "text/html"); // Ensure the content type is set correctly
+    res.send(response.data);
+  } catch (error) {
+    console.error("Error fetching content:", error.message);
+    res.status(500).send("Error fetching gallery content.");
   }
 });
+
 
 app.get("/home", (req, res) => {
   if (isMobile(req)) {
