@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slideMenu.classList.remove("open");
     });
 
-    // Close menu when clicking outsidew
+    // Close menu when clicking outside
     document.addEventListener("click", (e) => {
         if (!slideMenu.contains(e.target) && !hamburgerBtn.contains(e.target) && !closeBtn.contains(e.target)) {
             slideMenu.classList.remove("open");
