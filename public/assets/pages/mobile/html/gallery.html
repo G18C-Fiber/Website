@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  </div>
+  <div id="desktop-error">
+      <h2>Uh-Oh!</h2>
+      <p>This page does not yet support portrait mode. Try rotating your screen.</p>
+  </div>
+  
+  <meta charset="UTF-8" />    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slick Carousels</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .carousel-container {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            max-width: 1000px;
+            margin-bottom: 40px;
+        }
+        .carousel {
+            width: 100%;
+        }
+        .carousel .slick-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }
+
+        /* 1:1 Aspect Ratio Carousel */
+        #slickCarousel1 {
+            padding: 20px 0;
+        }
+        #slickCarousel1 .slick-slide {
+            padding: 0 10px;
+        }
+        #slickCarousel1 .slick-slide img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            max-width: 520px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        /* 9:16 Aspect Ratio Carousel */
+        .carousel-9-16 img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 9 / 16;
+            max-width: 320px;
+            border-radius: 8px; /* Subtle rounded corners */
+            object-fit: cover; /* Ensure the image covers the entire space */
+            object-position: center; /* Center the image */
+        }
+
+        /* 3:4 Aspect Ratio Carousel */
+        .carousel-4-3 img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 3 / 4;
+            max-width: 320px;
+            border-radius: 8px;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        /* Add custom height to the 1:1 carousel container to prevent cropping */
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+               height: auto;
+            max-height: 8950px; /* Adjust the max height for the container */
+        }
+    </style>
+
+
+
+
+
+</head>
+
+  <!-- Full-Screen Slide-In Menu -->
+  <div id="slide-menu" class="slide-menu">
+      <button id="close-btn" class="close-btn" aria-label="Close Menu">&times;</button>
+      <ul class="menu-items">
+          <li><a href="home">Home</a></li>
+        <li><a href="gallery">Our Gallery</a></li>
+          <li> <a href="http://shop.mayvenn.com/SLBSalon" target="_blank" rel="noopener noreferrer">Shop Hair</a></li>
+          <li><a href="https://book.squareup.com/appointments/eb27f9b3-cec7-41a8-b745-13c554a49554/location/T7JGFDE46WDH5/services"target="_blank" rel="noopener noreferrer" >Our Services</a></li>
+          <li><a href="contact">Contact Us</a></li>
+
+
+  </div>
+  <div id="desktop-error">
+      <h2>Uh-Oh!</h2>
+      <p>This page does not yet support portrait mode. Try rotating your screen.</p>
+  </div>
+
+  <div id="mobile-content">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo500.png" alt="Salon Logo" class="navbar-logo">
+                Salon Luxury Beauty
+            </a>
+            <button id="hamburger-btn" class="hamburger-menu" aria-label="Toggle Menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Full-Screen Slide-In Menu -->
+    <div id="slide-menu" class="slide-menu">
+        <button id="close-btn" class="close-btn" aria-label="Close Menu">&times;</button>
+        <ul class="menu-items">
+            <li><a href="#home">Home</a></li>
+            <li>            <a href="http://shop.mayvenn.com/SLBSalon" target="_blank" rel="noopener noreferrer">Shop Hair</a></li>
+            <li><a href="https://book.squareup.com/appointments/eb27f9b3-cec7-41a8-b745-13c554a49554/location/T7JGFDE46WDH5/services"target="_blank" rel="noopener noreferrer" >Services</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+    </div>
+
+
+<body>
+  <div id="desktop-error">
+      <h2>Uh-Oh!</h2>
+      <p>This page is best viewed in portrait mode. Try rotating your screen.</p>
+  </div>
+  <div class="container mt-4">
+    <h2 class="text-start">Braids</h2>
+
+    <div class="carousel-container">
+      <div id="slickCarousel1" class="carousel">
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-d0764c3.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280,h:1707" alt="Image 1">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-3ac6d4a.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280,h:1707" alt="Image 3">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-a07c4f0.png/:/rs=w:1280,h:1707" alt="Image 4">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-1a26d32.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280,h:1707" alt="Image 5">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-4fa872b.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280,h:1707" alt="Image 6">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-164e2af.png/:/rs=w:1280,h:1707" alt="Image 7">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-a576e8f.png/:/rs=w:1280,h:1707" alt="Image 8">
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-start">Weaves/Extensions</h2>
+
+    <div class="carousel-container">
+      <div id="slickCarousel2" class="carousel carousel-4-3">
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-db9a88d.png/:/cr=t:12.62%25,l:0%25,w:100%25,h:74.76%25" alt="Slide 1">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-ddfc190.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:403,h:537" alt="Slide 2">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-d905949.png/:/cr=t:12.62%25,l:0%25,w:100%25,h:74.76%25" alt="Slide 3">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-6b22f5f.png/:/cr=t:12.62%25,l:0%25,w:100%25,h:74.76%25" alt="Slide 4">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-955f113.png/:/cr=t:5.48%25,l:0%25,w:100%25,h:89.03%25/rs=w:403,h:537" alt="Slide 5">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-ab15639.png/:/cr=t:0%25,l:1.87%25,w:96.26%25,h:100%25/rs=w:403,h:537" alt="Slide 6">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-666c868.png/:/cr=t:12.62%25,l:0%25,w:100%25,h:74.76%25" alt="Slide 7">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-29fd724.png/:/rs=w:984,h:1312" alt="Slide 8">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-798bd40.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:403,h:537" alt="Slide 9">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-2f6a301.png/:/cr=t:0%25,l:0.03%25,w:99.94%25,h:100%25/rs=w:403,h:537" alt="Slide 10">
+        </div>
+      </div>
+    </div>
+    <h2 class="text-start">Ponytails</h2>
+
+    <div class="carousel-container">
+      <div id="slickCarousel2" class="carousel carousel-9-16">
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-612a76b.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25" alt="Slide 1">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-2e50569.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:403,h:537" alt="Slide 2">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-8526d3a.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:403,h:537" alt="Slide 3">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-a9f8638.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1160,h:1547" alt="Slide 4">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-2861dc9.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:403,h:418" alt="Slide 5">
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <!--  <h2 class="text-start">Ponytails</h2>
+
+    <div class="carousel-container">
+      <div id="slickCarousel2" class="carousel carousel-9-16">
+        <div>
+          <img src="" alt="Slide 1">
+        </div>
+        <div>
+          <img src="" alt="Slide 2">
+        </div>
+        <div>
+          <img src="" alt="Slide 3">
+        </div>
+        <div>
+          <img src="" alt="Slide 4">
+        </div>
+        <div>
+          <img src="" alt="Slide 5">
+        </div>
+      </div>
+    </div>
+-->
+    
+
+    <h2 class="text-start">Cut/Color</h2>
+
+    <div class="carousel-container">
+      <div id="slickCarousel2" class="carousel carousel-4-3">
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-ea176ff.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1160,h:2062" alt="Slide 1">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-3faa1ce.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1160,h:2062" alt="Slide 2">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-ca93c76.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1160,h:2062" alt="Slide 3">
+        </div>
+        <div>
+          <img src="https://img1.wsimg.com/isteam/ip/346e6995-d01e-4547-8bbb-c9d43e853579/blob-38a6667.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1160,h:1547" alt="Slide 4">
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+     <script src="mobile.js"></script>
+    <link href="gallery.css" rel= stylesheet>
+<script src="hamburger.js"></script>
+<!-- Footer Section -->
+    <footer class="footer mt-5 py-3">
+        <div class="container text-center">
+            <p class="small mb-1">© 2024 Salon Luxury Beauty. All rights reserved.</p>
+            <p class="small mb-1">Email us at <a href="mailto:salonluxurybeauty@gmail.com">SalonLuxuryBeauty@gmail.com</a></p>
+            <p class="small mb-1">Call us at <a href="tel:+13472611641">+1 (347) 261-1641</a></p>
+        </div>
+    </footer>
+</body>
+</html>
