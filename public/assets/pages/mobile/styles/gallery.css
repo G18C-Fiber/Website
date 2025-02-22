@@ -77,12 +77,14 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Comfortaa';
+    font-family: 'Comfortaa'!important;
     background-color: gray; /* General background color */
     color: white;
-        font-family: 'Comfortaa', sans-serif;/* All text should be white */
+        /* All text should be white */
 }
-
+h1,h2{
+         font-family: 'Comfortaa'!important;
+}
 /* Desktop Error Screen */
 #desktop-error {
     position: fixed;
