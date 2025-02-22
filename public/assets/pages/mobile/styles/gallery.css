@@ -65,12 +65,14 @@
         }
   
 /* Import Google Fonts */
+/* General Reset */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
 
 /* Load custom Cosmopolitan Script font */
 @font-face {
     font-family: 'Cosmopolitan Script';
-    src: url('../../../..//fonts/CosmopolitanScript.otf') format('opentype');
+    src: url('../../../../assets/fonts/CosmopolitanScript.otf') format('opentype');
 }
 
 /* General styles */
