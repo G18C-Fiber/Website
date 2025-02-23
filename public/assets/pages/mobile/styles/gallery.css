@@ -16,6 +16,12 @@
             padding: 5px;
         }
 
+
+:root {
+    --bs-body-font-family: 'Comfortaa', cursive;
+}
+
+
         /* 1:1 Aspect Ratio Carousel */
         #slickCarousel1 {
             padding: 20px 0;
