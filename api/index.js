@@ -69,7 +69,7 @@ app.use((req, res) => {
 // Middleware to handle URI too long (414 status)
 app.use((req, res, next) => {
   // Check if URI length is too long (example limit: 2048 chars)
-  if (req.originalUrl.length > 2048) {
+  if (req.originalUrl.length > 128) {
     res.status(414).sendFile(path.join(__dirname, "../public/assets/pages/uri-too-long.html"));
   } else {
     next();
