@@ -15,6 +15,14 @@ function isMobile(req) {
 }
 
 // Routes
+app.use((req, res, next) => {
+  if (req.hostname === "www.slbsalon.com" && req.path === "/") {
+    return res.redirect(301, "/home");
+  }
+  next();
+});
+
+
 app.get("/shop", (req, res) => {
   if (isMobile(req)) {
     res.sendFile(path.join(__dirname, "../public/assets/pages/mobile/html/shop.html"));
