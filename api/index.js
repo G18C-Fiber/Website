@@ -66,6 +66,16 @@ app.get("/contact", (req, res) => {
 app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, "../public/assets/pages/404.html"));
 });
+// Middleware to handle URI too long (414 status)
+app.use((req, res, next) => {
+  // Check if URI length is too long (example limit: 2048 chars)
+  if (req.originalUrl.length > 2048) {
+    res.status(414).sendFile(path.join(__dirname, "../public/assets/pages/uri-too-long.html"));
+  } else {
+    next();
+  }
+});
+
 
 app.get("/", (req, res) => {
   res.redirect("/home");
