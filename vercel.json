@@ -5,12 +5,5 @@
       "src": "/(.*)",
       "dest": "/api/index.js"
     }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/home",
-      "permanent": true
-    }
   ]
 }
