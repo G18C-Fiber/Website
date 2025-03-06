@@ -55,6 +55,9 @@ app.get("/contact", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/assets/pages/desktop/html/contact.html"));
   }
 });
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "../public/assets/pages/404.html"));
+});
 
 app.get("/", (req, res) => {
   res.redirect("/home");
