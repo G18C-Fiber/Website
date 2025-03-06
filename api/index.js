@@ -62,6 +62,9 @@ app.use((req, res) => {
 app.get("/", (req, res) => {
   res.redirect("/home");
 });
+app.get("", (req, res) => {
+  res.redirect("/home");
+});
 
 // Export the app directly for Vercel
 module.exports = app;
